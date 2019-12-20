@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'connexion',
     loadChildren: () => import('./connexion/connexion.module').then( m => m.ConnexionPageModule)
+  },
+  {
+    path: 'player',
+    loadChildren: () => import('./player/player.module').then( m => m.PlayerPageModule)
   }
 ];
 @NgModule({

@@ -1,19 +1,126 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>player</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Les musiques</ion-title>
+        <script src="https://kit.fontawesome.com/68a55af12e.js" crossorigin="anonymous"></script>
+
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+<!--            src de l'image dans /src/app/player/player.page.scss-->
+            <div class="image_musique"></div>
+        </ion-col>
+        <ion-col size="8">
+          <div>
+            <ion-card-header>
+              <ion-card-subtitle>Auteur musique</ion-card-subtitle>
+              <ion-card-title>Titre musique</ion-card-title>
+            </ion-card-header>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 
-  <figure>
-    <figcaption>Listen to the T-Rex:</figcaption>
-    <audio
-            controls
-            src="/media/examples/t-rex-roar.mp3">
-      Your browser does not support the
-      <code>audio</code> element.
-    </audio>
-  </figure>
+    <ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <!--            src de l'image dans /src/app/player/player.page.scss-->
+                    <div class="image_musique"></div>
+                </ion-col>
+                <ion-col size="8">
+                    <div>
+                        <ion-card-header>
+                            <ion-card-subtitle>Auteur musique</ion-card-subtitle>
+                            <ion-card-title>Titre musique</ion-card-title>
+                        </ion-card-header>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
 
+    <ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <!--            src de l'image dans /src/app/player/player.page.scss-->
+                    <div class="image_musique"></div>
+                </ion-col>
+                <ion-col size="8">
+                    <div>
+                        <ion-card-header>
+                            <ion-card-subtitle>Auteur musique</ion-card-subtitle>
+                            <ion-card-title>Titre musique</ion-card-title>
+                        </ion-card-header>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+
+    <ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <!--            src de l'image dans /src/app/player/player.page.scss-->
+                    <div class="image_musique"></div>
+                </ion-col>
+                <ion-col size="8">
+                    <div>
+                        <ion-card-header>
+                            <ion-card-subtitle>Auteur musique</ion-card-subtitle>
+                            <ion-card-title>Titre musique</ion-card-title>
+                        </ion-card-header>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+
+    <ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <!--            src de l'image dans /src/app/player/player.page.scss-->
+                    <div class="image_musique"></div>
+                </ion-col>
+                <ion-col size="8">
+                    <div>
+                        <ion-card-header>
+                            <ion-card-subtitle>Auteur musique</ion-card-subtitle>
+                            <ion-card-title>Titre musique</ion-card-title>
+                        </ion-card-header>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+
+    <div style="padding-bottom: 100px"></div>
+
+    <div class="fond_player" style=""></div>
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+        <ion-icon name="ios-play"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+

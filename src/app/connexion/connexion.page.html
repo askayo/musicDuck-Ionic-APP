@@ -1,18 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>connexion</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title class="ion-text-center">connexion</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-justify-content-center">
-<h1>Se connecter</h1>
-  <!-- pseudo -->
-  <ion-input value="pseudo"></ion-input>
+<ion-content class="conteneur ion-justify-content-center">
+    <!--<h1>Se connecter</h1>-->
 
-  <!-- mdp -->
-  <ion-input value="Mot de passe" type="password"></ion-input>
+    <img src="/assets/music.png">
 
-  <a href="/">Se connecter</a>
+    <div class="form">
+        <!-- pseudo -->
+        <ion-text>Votre pseudo</ion-text>
+        <ion-input value="pseudo"></ion-input>
+
+        <hr>
+
+        <!-- mdp -->
+        <ion-text>Votre mot de passe</ion-text>
+        <ion-input value="Mot de passe" type="password"></ion-input>
+    </div>
+
+    <ion-button expand="block" color="ducknote" (click)="login()">
+        Se connecter
+    </ion-button>
 
 </ion-content>
 

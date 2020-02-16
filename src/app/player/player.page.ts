@@ -11,20 +11,20 @@ import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ion
 })
 export class PlayerPage implements OnInit {
   public file: MediaObject;
-  constructor(public media: Media,private mediaCapture: MediaCapture) {
+  constructor(public media: Media) {
   }
 
   ngOnInit() {
 
   }
-  public mediaCapture() {
-    let options: CaptureImageOptions = { limit: 3 };
-    this.mediaCapture.captureImage(options)
-        .then(
-            (data: MediaFile[]) => console.log(data),
-            (err: CaptureError) => console.error(err)
-        );
-  }
+  // public mediaCapture() {
+  //   let options: CaptureImageOptions = { limit: 3 };
+  //   this.mediaCapture.captureImage(options)
+  //       .then(
+  //           (data: MediaFile[]) => console.log(data),
+  //           (err: CaptureError) => console.error(err)
+  //       );
+  // }
 
   public playAudio() {
     this.file = this.media.create('http://195.83.128.21/~dev1906/ionic/musicsoundbetterwithyou.mp3');

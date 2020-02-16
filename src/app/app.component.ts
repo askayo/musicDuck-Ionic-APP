@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Storage } from '@ionic/storage';
 import {Router} from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 
 
@@ -19,7 +20,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private router: Router,
-    private storage: Storage
+    private storage: Storage,
   ) {
     this.initializeApp();
   }

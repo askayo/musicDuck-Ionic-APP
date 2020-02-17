@@ -7,26 +7,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-<!--            src de l'image dans /src/app/player/player.page.scss-->
-            <div class="image_musique"></div>
-        </ion-col>
-        <ion-col size="8">
-          <div>
-            <ion-card-header>
-              <ion-card-subtitle>Auteur musique</ion-card-subtitle>
-              <ion-card-title>Titre musique</ion-card-title>
-            </ion-card-header>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
 
-    <ion-card>
+    <ion-card *ngFor="let track of tracks ; let i = index" (click)="playAudio( i )">
         <ion-grid>
             <ion-row>
                 <ion-col>
@@ -36,8 +18,8 @@
                 <ion-col size="8">
                     <div>
                         <ion-card-header>
-                            <ion-card-subtitle>Auteur musique</ion-card-subtitle>
-                            <ion-card-title>Titre musique</ion-card-title>
+                            <ion-card-subtitle>{{track.author}}</ion-card-subtitle>
+                            <ion-card-title>{{track.src}}</ion-card-title>
                         </ion-card-header>
                     </div>
                 </ion-col>
@@ -45,62 +27,7 @@
         </ion-grid>
     </ion-card>
 
-    <ion-card>
-        <ion-grid>
-            <ion-row>
-                <ion-col>
-                    <!--            src de l'image dans /src/app/player/player.page.scss-->
-                    <div class="image_musique"></div>
-                </ion-col>
-                <ion-col size="8">
-                    <div>
-                        <ion-card-header>
-                            <ion-card-subtitle>Auteur musique</ion-card-subtitle>
-                            <ion-card-title>Titre musique</ion-card-title>
-                        </ion-card-header>
-                    </div>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
 
-    <ion-card>
-        <ion-grid>
-            <ion-row>
-                <ion-col>
-                    <!--            src de l'image dans /src/app/player/player.page.scss-->
-                    <div class="image_musique"></div>
-                </ion-col>
-                <ion-col size="8">
-                    <div>
-                        <ion-card-header>
-                            <ion-card-subtitle>Auteur musique</ion-card-subtitle>
-                            <ion-card-title>Titre musique</ion-card-title>
-                        </ion-card-header>
-                    </div>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
-
-    <ion-card>
-        <ion-grid>
-            <ion-row>
-                <ion-col>
-                    <!--            src de l'image dans /src/app/player/player.page.scss-->
-                    <div class="image_musique"></div>
-                </ion-col>
-                <ion-col size="8">
-                    <div>
-                        <ion-card-header>
-                            <ion-card-subtitle>Auteur musique</ion-card-subtitle>
-                            <ion-card-title>Titre musique</ion-card-title>
-                        </ion-card-header>
-                    </div>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </ion-card>
 
     <div style="padding-bottom: 100px"></div>
 
@@ -108,18 +35,30 @@
 </ion-content>
 
 <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button (click)="previousTrack()">
         <ion-icon name="ios-arrow-back"></ion-icon>
     </ion-fab-button>
 </ion-fab>
+
+
 <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="playAudio()">
+    <ion-fab-button (click)="pauseAudio()" *ngIf="isPlaying()">
+        <ion-icon name="ios-pause"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-button (click)="playAudio()" *ngIf="!isPlaying()">
         <ion-icon name="ios-play"></ion-icon>
     </ion-fab-button>
 </ion-fab>
 
+
+<ion-label  *ngIf="isPlaying()" color="dark" class="ion-text-md-center ion-padding-top" style="text-align: center">{{currentAuthor}} - {{currentTrackName}}</ion-label>
+<ion-item>
+    <ion-range #range min="0" max="100" [(ngModel)]="mediaTimer" (touchend)="seekTime()" (click)="seekTime()" color="dark" style="margin-bottom: 75px"></ion-range>
+</ion-item>
+
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
+    <ion-fab-button (click)="nextTrack()">
         <ion-icon name="ios-arrow-forward"></ion-icon>
     </ion-fab-button>
 </ion-fab>

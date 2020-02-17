@@ -17,4 +17,5 @@ import { PlayerPage } from './player.page';
   ],
   declarations: [PlayerPage]
 })
+
 export class PlayerPageModule {}

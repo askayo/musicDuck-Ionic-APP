@@ -51,7 +51,7 @@ export class AuthGuard implements CanActivate {
       next: ActivatedRouteSnapshot,
       state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
 
-    let userAuthenticated = true; // Pour le moment nous allons garder cette valeur à false
+    let userAuthenticated = false; // Pour le moment nous allons garder cette valeur à false
 
     if (userAuthenticated) {
       // Déjà connecté : on redirige l'utilisateur vers la page d'accueil

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-row>
+    <div>
+      <ion-buttons slot="start">
+        <ion-back-button  defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </div>
+      <ion-title>Mon Compte</ion-title>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image_musique"></div>
+  <div class="form">
+    <!-- pseudo -->
+    <ion-text>Votre pseudo</ion-text>
+    <ion-input value="pseudo"></ion-input>
+
+    <hr>
+
+    <!-- mdp -->
+    <ion-text>Votre mot de passe</ion-text>
+    <ion-input value="Mot de passe" type="password"></ion-input>
+  </div>
+  <ion-button expand="block" color="ducknote" (click)="login()">
+    Modifier mon profil
+  </ion-button>
+
+
+</ion-content>

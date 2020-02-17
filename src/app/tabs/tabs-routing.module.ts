@@ -7,33 +7,21 @@ const routes: Routes = [
     path: 'tabs',
     component: TabsPage,
     children: [
-      {
-        path: 'tab1',
+        {
+        path: 'capture',
         children: [
           {
-            path: '',
-            loadChildren: () =>
-              import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+            path: 'home/capture',
+            loadChildren: () => import('../capture/capture.module').then( m => m.CapturePageModule)
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'compte',
         children: [
           {
-            path: '',
-            loadChildren: () =>
-              import('../player/player.module').then(m => m.PlayerPageModule)
-          }
-        ]
-      },
-      {
-        path: 'tab3',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+            path: 'home/compte',
+            loadChildren: () => import('../compte/compte.module').then( m => m.ComptePageModule)
           }
         ]
       },

@@ -1,0 +1,57 @@
+.image_musique {
+  background-image: url("/assets/guitar.jpg");
+  width: 140px;
+  height: 140px;
+  background-size: cover;
+  border-radius: 200px;
+  background-repeat: no-repeat;
+  margin: 25px auto;
+}
+
+.form{
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 7px 6px 0px rgba(68, 68, 68, 0.2)
+}
+
+
+hr{
+  height: 1px;
+  margin: auto -10px 15px -10px;
+  background-color: #ececec;
+}
+
+ion-title{
+  color: #7906E5;
+  font-weight: bold;
+}
+
+ion-text {
+  width: 210px;
+  display: block;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: lightgrey;
+}
+
+.conteneur {
+  background-color: purple;
+}
+
+ion-input {
+  width: 210px;
+  height: 50px;
+  margin: 5px auto 5px auto;
+}
+
+ion-button {
+  background-color: #7906E5;
+  width: 90%;
+  margin: 25px auto;
+  border-radius: 15px;
+}
+
